@@ -1,0 +1,24 @@
+ALGORITHM task1 sentence
+VAR
+    f:STRING;
+    NUMBER-OF-WORDS:INTEGER =1;
+    NUMBER-OF-VOI =0
+    NUMBER-OF-CHARECTERS:INTEGER=1;
+    i:INTEGER=0;
+BEGIN
+    WHILE (f[i]<>".") DO
+        i++
+        Read(s[i])
+        NUMBER-OF-CHARECTERS+=1
+        IF (f[i]="a" OR f[i]="A" OR f[i]="e" OR f[i]="E" OR f[i]="i" OR f[i]="I" OR f[i]="o" OR f[i]="O" OR f[i]="u" OR f[i]="U" OR 
+        f[i]="Y" OR f[i]="y" ) THEN
+            NUMBER-OF-VOI+=1
+        END_IF
+        IF (f[i]=" ") THEN
+            NUMBER-OF-WORDS+=1
+        END_IF
+    END_WHILE
+    Write("number of char=",NUMBER-OF-CHARECTERS);
+    Write("number of voi=",NUMBER-OF-VOI);
+    Write("number of words=",NUMBER-OF-WORDS);
+END
